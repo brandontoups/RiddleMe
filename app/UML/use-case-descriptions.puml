@@ -1,0 +1,199 @@
+@startsalt
+
+{
+Use Case Descriptions
+---
+
+
+' name:     Brandon Toups, Evan McCarthy
+' email:    bmt0015        esm0012
+' class:    COMP3710-001
+' date:     3 May 2018
+' file:     use-case-diagram.puml
+
+
+{T
++ Login to the app
+
+++ Goal:
++++ To log in to the application, setting name, email, avatar, and password as well.
+
+++ Entry Conditions: 
++++ The splash screen must have shown before this.
++++ The user has not entered information yet.
+
+++ Scenario:
++++ The user opens the app.
++++ The user enters his name, email, and password, as well as choose specific avatar.
+
+++ Exceptions:
++++ If the user does not enter any of these information fields, the app will alert him or her to this and not log in.
+
+++ Exit Conditions: 
++++ Successful Exit Conditions:
+++++ The application takes the user to the Navigation screen.
+++++ The application has saved the name, email, avatar, password for the user.
++++ Failure Exit Conditions: 
+++++ The application does not take the user to the Navigation screen. 
+++++ The application has not saved the name, email, avatar, password for the user.
+
+}
+---
+{T
++ Secondary login
+
+++ Goal: To log back into the app after closing it out 
++++  To log back into the app after closing it out.
+
+++ Entry Conditions: 
++++ The user must have already logged in once before, and inputted all of his information
++++ The app must have been closed out 
+
+++ Scenario:
++++ The user opens the app.
++++ The user goes ot log back into the app, inputting his correct password
+
+++ Exceptions:
++++ The user enters the wrong password
+
+++ Exit Conditions: 
++++ Successful Exit Conditions:
+++++ The user is logged back into the app
++++ Failure Exit Conditions: 
+++++ The user is not logged back into the app
+
+}
+---
+
+{T
++ View settings
+
+++ Goal:
++++ The user wants to view the various settings
+
+++ Entry Conditions: 
++++ The user must be in the app already.
+
+++ Scenario:
++++ The user clicks the Settings button on the Navigation page
+
+++ Exceptions:
++++ n/a
+
+++ Exit Conditions: 
++++ Successful Exit Conditions:
+++++ The user is now viewing the settings
++++ Failure Exit Conditions: 
+++++ The user is not viewing the settings
+
+}
+
+--
+{T
++ Change settings
+
+++ Goal:
++++ The user wants to change the various settings
+
+++ Entry Conditions: 
++++ The user must have entered the Settings page, and is now viewing the settings
+
+++ Scenario:
++++ The user chooses to change name, email, avatar, mute sound, reset score
+
+++ Exceptions:
++++ The user enters blank for any field
+
+++ Exit Conditions: 
++++ Successful Exit Conditions:
+++++ The user has changed a setting, and the app reports that.
++++ Failure Exit Conditions: 
+++++ The user has not changed the desired setting, and the app remains in the same state
+
+}
+-- 
+
+{T
++ Play the quiz
+
+++ Goal:
++++ The user will play a 10 question quiz.
+
+++ Entry Conditions: 
++++ The user must have clicked the 'Quiz' button.
+
+++ Scenario:
++++ The user clicks the button. 
++++ The user enters an answer for all 10 questions on the quiz. 
+
+++ Exceptions:
++++ If the user does not click an answer choice for any of the questions, the app does nothing except alert them of this 
+
+++ Exit Conditions: 
++++ Successful Exit Conditions:
+++++ The user plays the quiz and the app no longer pushes questions to the user
+++++ The application only puts one question up at a time
+++++ The application puts a question up each time
+++++ Only records score if the user gets question right
++++ Failure Exit Conditions: 
+++++ The application goes over 10 questions
+++++ The applciation does not show a question
+++++ The score is different from how many the user got right
+
+}
+
+--
+{T
++ Show result
+
+++ Goal:
++++ The user views the score for the quiz he or she just took 
+
+++ Entry Conditions: 
++++ The user has taken a quiz of 10 questions
+
+++ Scenario:
++++ The user plays a quiz of 10 questions and then 
++++ The user is taken to the screen that displays the score
+
+++ Exceptions:
++++ The user gets a high score
+++++ An animation is shown of a flashing trophy.
+
+++ Exit Conditions: 
++++ Successful Exit Conditions:
+++++ The user sees the actual score he got. 
+++++ If a high score, the user is shown the animation
++++ Failure Exit Conditions: 
+++++ User is incorrectly shown the animation
+++++ User is shown a score that is incorrect
+
+}
+--
+{T
++ Fetch Questions
+
+++ Goal:
++++ The app needs to fetch the questions
+
+++ Entry Conditions: 
++++ The application must have a database of questions already made
+
+++ Scenario:
++++ The user goes to play the app. The questions are fetched.
+
+++ Exceptions:
++++ n/a
+
+++ Exit Conditions: 
++++ Successful Exit Conditions:
+++++ The application fetches the questions
++++ Failure Exit Conditions: 
+++++ The application does not fetch the questions
+
+}
+--
+
+'end of salt bracket
+}
+@endsalt

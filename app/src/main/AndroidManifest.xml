@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.auburn.eng.csse.comp3710.spring2018.ArrayIndexOutOfBoundsException">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/round_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".Navigation"
+            >
+
+        </activity>
+        <activity android:name=".Settings"
+            android:screenOrientation="portrait"
+            >
+
+        </activity>
+        <activity android:name=".QuizActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:enabled="true" android:name=".BackgroundSoundService" />
+        <service android:enabled="true" android:name=".VaderBackgroundSoundService" />
+
+    </application>
+
+
+</manifest>

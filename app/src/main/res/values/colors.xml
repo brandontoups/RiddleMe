@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="blue_top_bar">#03a9f4</color>
+    <color name="correct_green">#64dd17</color>
+    <color name="regular_next_button">#21a2f2</color>
+    <color name="incorrect_red">#d50000</color>
+    <color name="primary_app">#2196f3</color>
+    <color name="dark_primary_color">#1976d2</color>
+</resources>

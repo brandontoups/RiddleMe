@@ -1,0 +1,35 @@
+@startuml
+
+' name:     Brandon Toups, Evan McCarthy
+' email:    bmt0015        esm0012
+' class:    COMP3710-001
+' date:     3 May 2018
+' file:     system-sequence.puml
+
+title riddle me SSD
+
+actor User
+participant Quiz
+actor Database
+
+group SD: Quiz
+User -> Quiz: start
+Quiz -> Database: fetch question set 
+Quiz <-- Database: return question set
+loop while(question # < 10)
+User <-- Quiz: Question
+User <-- Quiz: Answer
+User <-- Quiz: Multiple choice options
+User -> Quiz: choose answer
+User <-- Quiz: validate answer
+
+' end loop
+end
+
+User <-- Quiz: show result
+
+' end group
+end
+
+
+@enduml

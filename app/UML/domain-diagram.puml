@@ -1,0 +1,41 @@
+@startuml
+
+' name:     Brandon Toups, Evan McCarthy
+' email:    bmt0015        esm0012
+' class:    COMP3710-001
+' date:     3 May 2018
+' file:     domain-diagram.puml
+
+title riddle me Domain Diagram
+
+class User {
+    questionsAnswered
+    highScore
+}
+class Questions {
+    
+}
+class Answers {
+    correctAnswer
+}
+class Quiz {
+    
+}
+class Result {
+    
+}
+class Database {
+    questionSet
+}
+
+
+hide empty members
+hide methods
+
+User --  Quiz: plays >
+Quiz "1" *-- "10" Questions: contains >
+Quiz "1" *-- "40" Answers: contains >
+User -- Result: sends score to >
+Quiz "1" -- "1" Database: fetches from > 
+
+@enduml

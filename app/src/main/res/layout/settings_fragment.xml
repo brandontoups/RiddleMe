@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/a">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/settings_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:paddingLeft="20dp"
+                android:text="Name: "
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/settings_change_name_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_weight=".5"
+                android:text="Change name"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:backgroundTint="#21a2f2"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_below="@id/a"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/b">
+
+        <EditText
+            android:id="@+id/settings_enter_name_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:visibility="invisible"
+            android:layout_marginTop="10dp"
+            android:hint="Enter name :"
+            android:textSize="16sp"
+            />
+
+        <Button
+            android:id="@+id/settings_submit_name_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="Submit"
+            android:visibility="invisible"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#21a2f2"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/c"
+        android:layout_below="@id/b">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/settings_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Email: "
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/settings_change_email_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="Change email"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#21a2f2"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_below="@id/c"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/d"
+        >
+
+        <EditText
+            android:id="@+id/settings_enter_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:visibility="invisible"
+            android:layout_marginTop="10dp"
+            android:hint="Enter email :"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/settings_submit_email_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="Submit"
+            android:visibility="invisible"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#21a2f2"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:layout_below="@+id/d"
+        android:id="@+id/e">
+
+        <TextView
+            android:id="@+id/settings_score"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="High Score: "
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/settings_reset_score"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="Reset score"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:backgroundTint="#21a2f2"
+            android:textColor="#FFFFFF"
+            />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/mute_sound_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/unmute_sound_button"
+        android:layout_below="@+id/change_avatar_layout"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:backgroundTint="#21a2f2"
+        android:text="Mute music"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        android:layout_marginRight="10dp"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/unmute_sound_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mute_sound_button"
+        android:layout_alignBottom="@+id/mute_sound_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:backgroundTint="#21a2f2"
+        android:text="Unmute music"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:visibility="invisible"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/change_avatar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/e"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+
+
+        <Button
+            android:id="@+id/change_jedi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#21a2f2"
+            android:text="Change avatar to Jedi"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/change_vader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#21a2f2"
+            android:text="Change avatar to Vader"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/back_to_menu_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back to menu"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:layout_below="@id/unmute_sound_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:backgroundTint="#21a2f2"
+        android:textColor="#FFFFFF"/>
+
+
+</RelativeLayout>

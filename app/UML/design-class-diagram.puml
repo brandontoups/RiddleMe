@@ -1,0 +1,87 @@
+@startuml
+
+' name:     Brandon Toups, Evan McCarthy
+' email:    bmt0015        esm0012
+' class:    COMP3710-001
+' date:     3 May 2018ƒ
+' file:     design-class-diagram.puml
+
+title riddle me Design Class Model
+
+class BackgroundSoundService {
+    MediaPlayer
+} 
+class VaderBackgroundSoundService {
+    vaderMediaPlayer
+}
+class Database {
+    -databaseVersion
+    -databaseName
+    -databaseTable
+    -keyID
+    -questionID
+    -answerID
+    -correctAnswer
+    -addQuestions()
+    +populateDatabase()
+    +retrieveQuestions()
+}
+class MainActivity << (A,orchid) >> {
+    avatarArray
+    showPassword()
+    showPasswordAgain()
+}
+class Navigation << (A,orchid) >> {
+    serviceIntent
+    +playMusic
+}
+class Question {
+    -question
+    -answerA
+    -answerB
+    -answerC
+    -answerD
+    -questionID
+}
+class QuestionFragment << (A,orchid) >> {
+    setOfQuestions
+    currentScore
+    questionsAnswered
+    +validateAnswer()
+}
+class QuizActivity << (A,orchid) >> {
+
+}
+class ResultFragment << (A,orchid) >> {
+    animate
+    animation
+}
+class Settings << (A,orchid) >> {
+
+}
+class SplashActivity << (A,orchid) >> {
+    splashIntent
+}
+class User {
+    name
+    email
+    password
+    avatar
+
+
+}
+
+User -- Settings
+User -- Navigation
+User -- SplashActivity
+SplashActivity -- MainActivity
+User -- Quiz
+Quiz -|> QuestionFragment
+Quiz -|> BackgroundSoundService
+Quiz -|> VaderBackgroundSoundService
+Quiz -|> ResultFragment
+Quiz -|> Database
+QuestionFragment -- Question
+Quiz -|> QuizActivity
+
+@enduml
