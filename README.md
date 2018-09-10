@@ -36,7 +36,7 @@ on if you pick Jedi or Vader as your side.
 ---
 
 <video width="320" height="240" controls>
-  <source src="sound.mov" type="video/mp4">
+  <source src="/app/media/sound.mov" type="video/mp4">
 </video>
 
 
