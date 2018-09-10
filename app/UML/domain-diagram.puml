@@ -6,7 +6,7 @@
 ' date:     3 May 2018
 ' file:     domain-diagram.puml
 
-title riddle me Domain Diagram
+title RiddleMe Domain Diagram
 
 class User {
     questionsAnswered

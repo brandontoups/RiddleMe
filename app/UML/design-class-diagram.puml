@@ -6,7 +6,7 @@
 ' date:     3 May 2018ƒ
 ' file:     design-class-diagram.puml
 
-title riddle me Design Class Model
+title RiddleMe Design Class Model
 
 class BackgroundSoundService {
     MediaPlayer

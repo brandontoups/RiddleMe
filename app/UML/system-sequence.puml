@@ -6,7 +6,7 @@
 ' date:     3 May 2018
 ' file:     system-sequence.puml
 
-title riddle me SSD
+title RiddleMe SSD
 
 actor User
 participant Quiz
